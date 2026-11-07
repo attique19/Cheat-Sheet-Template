@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="prism.css" />
+    <script src="prism.js"></script>
+    <title>Cheat Sheet Template</title>
+  </head>
+  <body>
+    <nav>
+  <div class="content">
+    <span class="logo"><img src="Copy.svg" alt="Copy Icon" /></span>
+    <span class="text">Cheat Sheet Template</span> 
+  </div>
+  <div class="side">
+    <a href="index.html" class="active">JavaScript</a>
+    <a href="html.html">HTML</a>
+    <a href="CSS.html">CSS</a>
+  </div>
+</nav>
+    <div class="container">
+        <h1>JavaScript Cheat Sheet</h1>
+      <li>
+  <h3>Variables</h3>
+  <p>Declare values using var, let, or const.</p>
+  <pre class="language-js"><code>let name = "Attique";
+const age = 21;
+var city = "Mianwali";</code></pre>
+</li>
+
+<li>
+  <h3>Data Types</h3>
+  <p>JS has 7 primitive types.</p>
+  <pre class="language-js"><code>let str = "Hello";           // String
+let num = 42;                // Number
+let bool = true;             // Boolean
+let nothing = null;          // Null
+let undef = undefined;       // Undefined
+let sym = Symbol("id");      // Symbol
+let big = 9007199254740991n; // BigInt</code></pre>
+</li>
+
+<li>
+  <h3>Template Literals</h3>
+  <p>Embed variables inside strings using backticks.</p>
+  <pre class="language-js"><code>let name = "Attique";
+let msg = `Hello, ${name}! Welcome.`;
+console.log(msg); // Hello, Attique! Welcome.</code></pre>
+</li>
+
+<li>
+  <h3>Conditionals</h3>
+  <p>Run code based on a condition.</p>
+  <pre class="language-js"><code>let score = 75;
+if (score >= 90) {
+  console.log("A Grade");
+} else if (score >= 60) {
+  console.log("B Grade");
+} else {
+  console.log("Fail");
+}</code></pre>
+</li>
+
+<li>
+  <h3>Loops</h3>
+  <p>Repeat code multiple times.</p>
+  <pre class="language-js"><code>// for loop
+for (let i = 0; i < 3; i++) {
+  console.log(i); // 0, 1, 2
+}
+
+// while loop
+let x = 0;
+while (x < 3) {
+  console.log(x);
+  x++;
+}</code></pre>
+</li>
+
+<li>
+  <h3>Functions</h3>
+  <p>Reusable blocks of code.</p>
+  <pre class="language-js"><code>// Regular function
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+// Arrow function
+const add = (a, b) => a + b;
+
+console.log(greet("Attique")); // Hello, Attique!
+console.log(add(3, 4));        // 7</code></pre>
+</li>
+
+<li>
+  <h3>Arrays</h3>
+  <p>Store multiple values in one variable.</p>
+  <pre class="language-js"><code>let fruits = ["apple", "mango", "banana"];
+
+console.log(fruits[0]);     // apple
+fruits.push("grape");       // add to end
+fruits.pop();               // remove from end
+console.log(fruits.length); // 3</code></pre>
+</li>
+
+<li>
+  <h3>Array Methods — map, filter, reduce</h3>
+  <p>Transform arrays without changing the original.</p>
+  <pre class="language-js"><code>let nums = [1, 2, 3, 4, 5];
+
+let doubled = nums.map(n => n * 2);        // [2, 4, 6, 8, 10]
+let evens = nums.filter(n => n % 2 === 0); // [2, 4]
+let sum = nums.reduce((acc, n) => acc + n, 0); // 15</code></pre>
+</li>
+
+<li>
+  <h3>Objects</h3>
+  <p>Store related data as key-value pairs.</p>
+  <pre class="language-js"><code>let student = {
+  name: "Attique",
+  age: 21,
+  university: "UMW"
+};
+
+console.log(student.name);   // Attique
+console.log(student["age"]); // 21
+student.city = "Mianwali";   // add new key</code></pre>
+</li>
+
+<li>
+  <h3>Spread Operator</h3>
+  <p>Copy or merge arrays/objects without mutation.</p>
+  <pre class="language-js"><code>let arr1 = [1, 2, 3];
+let arr2 = [...arr1, 4, 5];   // [1, 2, 3, 4, 5]
+
+let obj1 = { a: 1 };
+let obj2 = { ...obj1, b: 2 }; // { a: 1, b: 2 }</code></pre>
+</li>
+
+<li>
+  <h3>Destructuring</h3>
+  <p>Unpack values from arrays or objects easily.</p>
+  <pre class="language-js"><code>// Array destructuring
+let [first, second] = ["apple", "mango"];
+
+// Object destructuring
+let { name, age } = { name: "Attique", age: 21 };
+
+console.log(first); // apple
+console.log(name);  // Attique</code></pre>
+</li>
+
+<li>
+  <h3>Default Parameters</h3>
+  <p>Set fallback values for function parameters.</p>
+  <pre class="language-js"><code>function greet(name = "Guest") {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet());          // Hello, Guest!
+console.log(greet("Attique")); // Hello, Attique!</code></pre>
+</li>
+
+<li>
+  <h3>String Methods</h3>
+  <p>Useful built-in methods for strings.</p>
+  <pre class="language-js"><code>let str = "  Hello World  ";
+
+str.trim();                 // "Hello World"
+str.toLowerCase();          // "  hello world  "
+str.toUpperCase();          // "  HELLO WORLD  "
+str.includes("World");      // true
+str.split(" ");             // ["", "", "Hello", "World", "", ""]
+str.replace("World", "JS"); // "  Hello JS  "</code></pre>
+</li>
+
+<li>
+  <h3>Ternary Operator</h3>
+  <p>A short one-line if/else.</p>
+  <pre class="language-js"><code>let age = 18;
+let result = age >= 18 ? "Adult" : "Minor";
+console.log(result); // Adult</code></pre>
+</li>
+
+<li>
+  <h3>Nullish Coalescing (??)</h3>
+  <p>Return the right side only if left is null or undefined.</p>
+  <pre class="language-js"><code>let username = null;
+let display = username ?? "Guest";
+console.log(display); // Guest
+
+let score = 0;
+let final = score ?? 10;
+console.log(final); // 0 (not 10, because 0 is NOT null/undefined)</code></pre>
+</li>
+
+<li>
+  <h3>Optional Chaining (?.)</h3>
+  <p>Safely access nested properties without errors.</p>
+  <pre class="language-js"><code>let user = { profile: { name: "Attique" } };
+
+console.log(user.profile?.name);  // Attique
+console.log(user.address?.city);  // undefined (no error!)</code></pre>
+</li>
+
+<li>
+  <h3>Promises and Async/Await</h3>
+  <p>Handle asynchronous operations cleanly.</p>
+  <pre class="language-js"><code>// Promise
+fetch("https://api.example.com/data")
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.log(err));
+
+// Async/Await (cleaner version)
+async function getData() {
+  try {
+    let res = await fetch("https://api.example.com/data");
+    let data = await res.json();
+    console.log(data);
+  } catch (err) {
+    console.log(err);
+  }
+}</code></pre>
+</li>
+
+<li>
+  <h3>for...of and for...in</h3>
+  <p>Loop through arrays and objects.</p>
+  <pre class="language-js"><code>let fruits = ["apple", "mango"];
+
+// for...of → loops through VALUES (use for arrays)
+for (let fruit of fruits) {
+  console.log(fruit); // apple, mango
+}
+
+let student = { name: "Attique", age: 21 };
+
+// for...in → loops through KEYS (use for objects)
+for (let key in student) {
+  console.log(key, student[key]); // name Attique, age 21
+}</code></pre>
+</li>
+
+<li>
+  <h3>Error Handling</h3>
+  <p>Catch and handle errors gracefully.</p>
+  <pre class="language-js"><code>try {
+  let result = riskyFunction(); // might throw error
+  console.log(result);
+} catch (error) {
+  console.log("Error caught:", error.message);
+} finally {
+  console.log("This always runs");
+}</code></pre>
+</li>
+
+<li>
+  <h3>localStorage</h3>
+  <p>Save data in the browser that persists after refresh.</p>
+  <pre class="language-js"><code>// Save data
+localStorage.setItem("username", "Attique");
+
+// Get data
+let user = localStorage.getItem("username");
+console.log(user); // Attique
+
+// Remove data
+localStorage.removeItem("username");
+
+// Clear everything
+localStorage.clear();</code></pre>
+</li>
+      </ol>
+    </div>
+    <script>
+  // Get the current page filename e.g. "Js.html"
+  const currentPage = window.location.pathname.split("/").pop();
+
+  // Loop through all nav links
+  const navLinks = document.querySelectorAll(".side a");
+
+  navLinks.forEach(link => {
+    // Get the filename from each link's href e.g. "Js.html"
+    const linkPage = link.getAttribute("href");
+
+    // If it matches current page, add active class
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+  </body>
+</html>

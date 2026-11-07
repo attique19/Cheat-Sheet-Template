@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="prism.css" />
+    <script src="prism.js"></script>
+    <title>HTML Cheat Sheet Template</title>
+</head>
+<body>
+  <nav>
+  <div class="content">
+    <span class="logo"><img src="Copy.svg" alt="Copy Icon" /></span>
+    <span class="text">Cheat Sheet Template</span> 
+  </div>
+  <div class="side">
+    <a href="index.html" >JavaScript</a>
+    <a href="html.html" class="active" >HTML</a>
+    <a href="CSS.html" >CSS</a>
+  </div>
+</nav>
+ <div class="container">
+        <h1>HTML Cheat Sheet</h1>
+        <ol>
+          <li>
+  <h3>Basic Structure</h3>
+  <p>Every HTML page starts with this boilerplate structure.</p>
+  <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</li>
+
+<li>
+  <h3>Headings</h3>
+  <p>HTML has 6 levels of headings, h1 being the largest.</p>
+  <pre class="language-html"><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+</li>
+
+<li>
+  <h3>Paragraphs and Text</h3>
+  <p>Basic tags for displaying and formatting text.</p>
+  <pre class="language-html"><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;strong&gt;Bold text&lt;/strong&gt;
+&lt;em&gt;Italic text&lt;/em&gt;
+&lt;u&gt;Underlined text&lt;/u&gt;
+&lt;br /&gt;  &lt;!-- line break --&gt;
+&lt;hr /&gt;  &lt;!-- horizontal line --&gt;</code></pre>
+</li>
+
+<li>
+  <h3>Links</h3>
+  <p>Use anchor tags to link to other pages or websites.</p>
+  <pre class="language-html"><code>&lt;!-- External link --&gt;
+&lt;a href="https://google.com" target="_blank"&gt;Visit Google&lt;/a&gt;
+
+&lt;!-- Internal link --&gt;
+&lt;a href="about.html"&gt;About Page&lt;/a&gt;
+
+&lt;!-- Link to section on same page --&gt;
+&lt;a href="#contact"&gt;Go to Contact&lt;/a&gt;</code></pre>
+</li>
+
+<li>
+  <h3>Images</h3>
+  <p>Display images using the img tag. Always add alt for accessibility.</p>
+  <pre class="language-html"><code>&lt;!-- Local image --&gt;
+&lt;img src="photo.jpg" alt="My Photo" width="300" /&gt;
+
+&lt;!-- External image --&gt;
+&lt;img src="https://example.com/image.png" alt="Example" /&gt;</code></pre>
+</li>
+
+<li>
+  <h3>Lists</h3>
+  <p>Ordered lists are numbered, unordered lists use bullets.</p>
+  <pre class="language-html"><code>&lt;!-- Unordered list --&gt;
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Ordered list --&gt;
+&lt;ol&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+</li>
+
+<li>
+  <h3>Tables</h3>
+  <p>Display data in rows and columns using table tags.</p>
+  <pre class="language-html"><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Attique&lt;/td&gt;
+      &lt;td&gt;21&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</li>
+
+<li>
+  <h3>Forms</h3>
+  <p>Collect input from the user using form elements.</p>
+  <pre class="language-html"><code>&lt;form action="/submit" method="POST"&gt;
+  &lt;input type="text" placeholder="Your Name" /&gt;
+  &lt;input type="email" placeholder="Your Email" /&gt;
+  &lt;input type="password" placeholder="Password" /&gt;
+  &lt;input type="checkbox" /&gt; Remember me
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+</li>
+
+<li>
+  <h3>Div and Span</h3>
+  <p>div is a block container, span is an inline container for grouping elements.</p>
+  <pre class="language-html"><code>&lt;!-- div takes full width (block) --&gt;
+&lt;div class="card"&gt;
+  &lt;p&gt;This is inside a div&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- span stays inline --&gt;
+&lt;p&gt;My name is &lt;span style="color: blue;"&gt;Attique&lt;/span&gt;&lt;/p&gt;</code></pre>
+</li>
+
+<li>
+  <h3>Semantic Elements</h3>
+  <p>Semantic tags give meaning to your HTML structure.</p>
+  <pre class="language-html"><code>&lt;header&gt;Site Header&lt;/header&gt;
+&lt;nav&gt;Navigation Links&lt;/nav&gt;
+&lt;main&gt;Main Content&lt;/main&gt;
+&lt;section&gt;A Section&lt;/section&gt;
+&lt;article&gt;An Article&lt;/article&gt;
+&lt;aside&gt;Sidebar Content&lt;/aside&gt;
+&lt;footer&gt;Site Footer&lt;/footer&gt;</code></pre>
+</li>
+
+<li>
+  <h3>Meta Tags</h3>
+  <p>Meta tags provide information about the page to browsers and search engines.</p>
+  <pre class="language-html"><code>&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;meta name="description" content="JavaScript Cheat Sheet" /&gt;
+  &lt;meta name="author" content="Attique" /&gt;
+  &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+</li>
+
+<li>
+  <h3>Audio and Video</h3>
+  <p>Embed media files directly into your HTML page.</p>
+  <pre class="language-html"><code>&lt;!-- Audio --&gt;
+&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg" /&gt;
+&lt;/audio&gt;
+
+&lt;!-- Video --&gt;
+&lt;video controls width="400"&gt;
+  &lt;source src="video.mp4" type="video/mp4" /&gt;
+&lt;/video&gt;</code></pre>
+</li>
+
+<li>
+  <h3>iFrame</h3>
+  <p>Embed another webpage or content inside your page.</p>
+  <pre class="language-html"><code>&lt;iframe
+  src="https://www.google.com/maps/embed"
+  width="600"
+  height="400"
+  allowfullscreen
+&gt;&lt;/iframe&gt;</code></pre>
+</li>
+
+<li>
+  <h3>HTML Entities</h3>
+  <p>Use entities to display reserved or special characters.</p>
+  <pre class="language-html"><code>&amp;lt;   → displays &lt;
+&amp;gt;   → displays &gt;
+&amp;amp;  → displays &amp;
+&amp;copy; → displays ©
+&amp;nbsp; → non-breaking space
+&amp;quot; → displays "</code></pre>
+</li>
+
+<li>
+  <h3>Input Types</h3>
+  <p>HTML supports many input types for different kinds of data.</p>
+  <pre class="language-html"><code>&lt;input type="text" /&gt;
+&lt;input type="email" /&gt;
+&lt;input type="password" /&gt;
+&lt;input type="number" /&gt;
+&lt;input type="date" /&gt;
+&lt;input type="file" /&gt;
+&lt;input type="range" min="0" max="100" /&gt;
+&lt;input type="color" /&gt;
+&lt;input type="checkbox" /&gt;
+&lt;input type="radio" /&gt;</code></pre>
+</li>
+
+<li>
+  <h3>Select Dropdown</h3>
+  <p>Let users pick an option from a dropdown list.</p>
+  <pre class="language-html"><code>&lt;select name="language"&gt;
+  &lt;option value="html"&gt;HTML&lt;/option&gt;
+  &lt;option value="css"&gt;CSS&lt;/option&gt;
+  &lt;option value="js" selected&gt;JavaScript&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+</li>
+
+<li>
+  <h3>Data Attributes</h3>
+  <p>Store custom data on HTML elements using data- attributes.</p>
+  <pre class="language-html"><code>&lt;button data-id="101" data-role="admin"&gt;Click Me&lt;/button&gt;
+
+&lt;script&gt;
+  const btn = document.querySelector("button");
+  console.log(btn.dataset.id);   // 101
+  console.log(btn.dataset.role); // admin
+&lt;/script&gt;</code></pre>
+</li>
+
+<li>
+  <h3>Comments</h3>
+  <p>Comments are not displayed in the browser, used for notes in code.</p>
+  <pre class="language-html"><code>&lt;!-- This is a single line comment --&gt;
+
+&lt;!--
+  This is a
+  multi-line comment
+--&gt;</code></pre>
+</li>
+
+<li>
+  <h3>Linking CSS and JS</h3>
+  <p>Connect your stylesheet and script files to the HTML page.</p>
+  <pre class="language-html"><code>&lt;head&gt;
+  &lt;!-- Link CSS file --&gt;
+  &lt;link rel="stylesheet" href="style.css" /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;!-- Link JS file at bottom of body --&gt;
+  &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+</li>
+
+<li>
+  <h3>Favicon</h3>
+  <p>Add a small icon that appears on the browser tab.</p>
+  <pre class="language-html"><code>&lt;head&gt;
+  &lt;link rel="icon" type="image/png" href="favicon.png" /&gt;
+&lt;/head&gt;</code></pre>
+</li>
+        </ol>
+        </div>
+   
+</body>
+</html>

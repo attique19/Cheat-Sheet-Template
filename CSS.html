@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="prism.css" />
+    <script src="prism.js"></script>
+    <title>CSS Cheat Sheet Template</title>
+</head>
+<body><nav>
+  <div class="content">
+    <span class="logo"><img src="Copy.svg" alt="Copy Icon" /></span>
+    <span class="text">Cheat Sheet Template</span> 
+  </div>
+  <div class="side">
+    <a href="index.html" >JavaScript</a>
+    <a href="html.html">HTML</a>
+    <a href="CSS.html" class="active">CSS</a>
+  </div>
+</nav>
+     <div class="container">
+        <h1>CSS Cheat Sheet</h1>
+        <ol><li>
+  <h3>Ways to Add CSS</h3>
+  <p>CSS can be added inline, internally, or via an external file.</p>
+  <pre class="language-css"><code>/* 1. Inline */
+&lt;p style="color: red;"&gt;Hello&lt;/p&gt;
+
+/* 2. Internal — inside &lt;style&gt; in &lt;head&gt; */
+&lt;style&gt;
+  p { color: red; }
+&lt;/style&gt;
+
+/* 3. External — separate .css file */
+&lt;link rel="stylesheet" href="style.css" /&gt;</code></pre>
+</li>
+
+<li>
+  <h3>Selectors</h3>
+  <p>Selectors target which HTML elements to style.</p>
+  <pre class="language-css"><code>/* Tag selector */
+p { color: blue; }
+
+/* Class selector */
+.card { background: white; }
+
+/* ID selector */
+#header { font-size: 2rem; }
+
+/* Group selector */
+h1, h2, h3 { font-weight: bold; }
+
+/* Child selector */
+nav > a { color: red; }
+
+/* Descendant selector */
+div p { margin: 0; }</code></pre>
+</li>
+
+<li>
+  <h3>Colors</h3>
+  <p>CSS supports multiple ways to define colors.</p>
+  <pre class="language-css"><code>color: red;                  /* named color */
+color: #ff0000;              /* hex */
+color: rgb(255, 0, 0);       /* rgb */
+color: rgba(255, 0, 0, 0.5); /* rgb with opacity */
+color: hsl(0, 100%, 50%);    /* hsl */</code></pre>
+</li>
+
+<li>
+  <h3>Typography</h3>
+  <p>Control font styles, sizes, and spacing.</p>
+  <pre class="language-css"><code>p {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: bold;       /* 100 to 900 */
+  font-style: italic;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  text-align: center;      /* left | right | center | justify */
+  text-decoration: none;   /* underline | line-through */
+  text-transform: uppercase; /* lowercase | capitalize */
+}</code></pre>
+</li>
+
+<li>
+  <h3>Box Model</h3>
+  <p>Every element is a box made of content, padding, border, and margin.</p>
+  <pre class="language-css"><code>.box {
+  width: 200px;
+  height: 100px;
+  padding: 10px;         /* space inside border */
+  border: 2px solid black;
+  margin: 20px;          /* space outside border */
+  box-sizing: border-box; /* padding included in width */
+}</code></pre>
+</li>
+
+<li>
+  <h3>Display Property</h3>
+  <p>Controls how an element is displayed on the page.</p>
+  <pre class="language-css"><code>display: block;        /* takes full width */
+display: inline;       /* stays in line, no width/height */
+display: inline-block; /* inline but allows width/height */
+display: none;         /* hides the element completely */
+display: flex;         /* enables flexbox */
+display: grid;         /* enables grid layout */</code></pre>
+</li>
+
+<li>
+  <h3>Flexbox</h3>
+  <p>Easily align and distribute elements in a row or column.</p>
+  <pre class="language-css"><code>.container {
+  display: flex;
+  flex-direction: row;          /* row | column */
+  justify-content: space-between; /* main axis alignment */
+  align-items: center;          /* cross axis alignment */
+  flex-wrap: wrap;              /* wrap to next line */
+  gap: 16px;                    /* space between items */
+}
+
+.item {
+  flex: 1; /* each item takes equal space */
+}</code></pre>
+</li>
+
+<li>
+  <h3>Grid</h3>
+  <p>Create two-dimensional layouts with rows and columns.</p>
+  <pre class="language-css"><code>.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns */
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+/* Span across columns */
+.item {
+  grid-column: span 2;
+}</code></pre>
+</li>
+
+<li>
+  <h3>Position</h3>
+  <p>Control exactly where elements are placed on the page.</p>
+  <pre class="language-css"><code>.box {
+  position: static;    /* default, normal flow */
+  position: relative;  /* offset from normal position */
+  position: absolute;  /* relative to nearest positioned parent */
+  position: fixed;     /* stays fixed on screen while scrolling */
+  position: sticky;    /* sticks when scrolling past it */
+
+  top: 10px;
+  left: 20px;
+}</code></pre>
+</li>
+
+<li>
+  <h3>Background</h3>
+  <p>Set colors, images, and gradients as backgrounds.</p>
+  <pre class="language-css"><code>.box {
+  background-color: #1e1e2e;
+  background-image: url("bg.jpg");
+  background-size: cover;      /* cover | contain */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Gradient */
+  background: linear-gradient(to right, #89b4fa, #cba6f7);
+}</code></pre>
+</li>
+
+<li>
+  <h3>Border and Border Radius</h3>
+  <p>Add borders and round the corners of elements.</p>
+  <pre class="language-css"><code>.box {
+  border: 2px solid #89b4fa;
+  border-top: 4px dashed red;
+  border-radius: 8px;   /* rounds all corners */
+  border-radius: 50%;   /* makes a circle */
+  outline: 2px solid orange; /* outside the border */
+}</code></pre>
+</li>
+
+<li>
+  <h3>Shadows</h3>
+  <p>Add depth to elements and text using shadows.</p>
+  <pre class="language-css"><code>/* Box shadow */
+.card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Multiple shadows */
+.card {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2),
+              0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* Text shadow */
+h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}</code></pre>
+</li>
+
+<li>
+  <h3>Pseudo-classes</h3>
+  <p>Style elements based on their state or position.</p>
+  <pre class="language-css"><code>a:hover  { color: blue; }       /* mouse over */
+a:active { color: red; }        /* being clicked */
+a:visited { color: purple; }    /* already visited */
+input:focus { border: 2px solid blue; } /* focused */
+
+li:first-child { font-weight: bold; }  /* first item */
+li:last-child  { color: gray; }        /* last item */
+li:nth-child(2) { background: #eee; }  /* 2nd item */</code></pre>
+</li>
+
+<li>
+  <h3>Pseudo-elements</h3>
+  <p>Style specific parts of an element.</p>
+  <pre class="language-css"><code>/* First letter of a paragraph */
+p::first-letter { font-size: 2rem; color: red; }
+
+/* First line of a paragraph */
+p::first-line { font-weight: bold; }
+
+/* Add content before/after an element */
+.card::before {
+  content: "★ ";
+  color: gold;
+}
+
+.card::after {
+  content: " ✓";
+  color: green;
+}</code></pre>
+</li>
+
+<li>
+  <h3>Transitions</h3>
+  <p>Smoothly animate changes between CSS property values.</p>
+  <pre class="language-css"><code>.btn {
+  background-color: #89b4fa;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #cba6f7;
+}
+
+/* Transition multiple properties */
+.box {
+  transition: all 0.3s ease-in-out;
+}</code></pre>
+</li>
+
+<li>
+  <h3>Animations</h3>
+  <p>Create keyframe animations for more complex effects.</p>
+  <pre class="language-css"><code>/* Define the animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Apply the animation */
+.card {
+  animation: fadeIn 0.5s ease forwards;
+}</code></pre>
+</li>
+
+<li>
+  <h3>CSS Variables</h3>
+  <p>Store reusable values in variables to keep CSS consistent.</p>
+  <pre class="language-css"><code>/* Define variables in :root */
+:root {
+  --primary: #89b4fa;
+  --bg: #1e1e2e;
+  --text: #cdd6f4;
+  --radius: 8px;
+}
+
+/* Use variables */
+.card {
+  background-color: var(--bg);
+  color: var(--text);
+  border-radius: var(--radius);
+}</code></pre>
+</li>
+
+<li>
+  <h3>Media Queries</h3>
+  <p>Make your design responsive for different screen sizes.</p>
+  <pre class="language-css"><code>/* Mobile first — base styles apply to all */
+.container { padding: 10px; }
+
+/* Tablet and above */
+@media (min-width: 768px) {
+  .container { padding: 20px; }
+}
+
+/* Desktop and above */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}</code></pre>
+</li>
+
+<li>
+  <h3>Overflow</h3>
+  <p>Control what happens when content is too big for its container.</p>
+  <pre class="language-css"><code>.box {
+  overflow: visible; /* default, spills out */
+  overflow: hidden;  /* clips the content */
+  overflow: scroll;  /* always shows scrollbar */
+  overflow: auto;    /* scrollbar only when needed */
+
+  /* Control axis separately */
+  overflow-x: hidden;
+  overflow-y: scroll;
+}</code></pre>
+</li>
+
+<li>
+  <h3>Z-index</h3>
+  <p>Control which element appears on top when they overlap.</p>
+  <pre class="language-css"><code>.modal {
+  position: fixed;
+  z-index: 1000; /* higher = on top */
+}
+
+.overlay {
+  position: fixed;
+  z-index: 999;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+}
+
+/* Note: z-index only works on positioned elements
+   (relative, absolute, fixed, sticky) */</code></pre>
+</li>
+
+        </ol>
+        </div>
+</body>
+</html>
